@@ -1,0 +1,5 @@
+.section__services {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: clamp(16px, 1.2vw, 20px);
+}

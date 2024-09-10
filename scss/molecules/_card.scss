@@ -1,0 +1,29 @@
+.card {
+    &__content {
+        background-color: #f7f7f7;
+        border-radius: 20px;
+        padding: 24px;
+        grid-column: span 12;
+        text-align: center;
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+
+        h3 {
+            margin-top: 20px;
+            margin-bottom: 12px;
+        }
+
+        @media (min-width: 768px) {
+            grid-column: span 6;
+            align-items: start;
+            text-align: left;
+        }
+
+        @media (min-width: 1024px) {
+            grid-column: span 3;
+        }
+    }
+}

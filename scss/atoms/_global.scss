@@ -1,0 +1,85 @@
+$primary-color: #3f5e39;
+$secondary-color: #4e4b66;
+$gold-color:#ecd070;
+$heading-color: #1a1a1a;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto";
+    font-size: 16px;
+    color: $secondary-color;
+    line-height: 24px;
+}
+
+h1 {
+    font-size: clamp(39px, 5vw, 61px);
+    line-height: clamp(47px, 5vw, 73px);
+    font-weight: 900;
+    color: $secondary-color;
+
+    @media (min-width: 768px) {
+        max-width: 20ch;
+        margin: auto;
+    }
+
+    @media (min-width: 1280px) {
+        margin: 0;
+    }
+}
+
+h3 {
+    font-size: 20px;
+    line-height: 24px;
+    color: $secondary-color;
+}
+
+h1,
+h3 {
+    color: $secondary-color;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+main {
+    max-width: 1280px;
+    margin: auto;
+    padding: 60px 16px;
+}
+
+.site-header__img {
+    //width: 120px;
+    width: 100%;
+    height:100%;
+    // height: clamp(17.5rem, 58.6vw, 31.875rem);
+    object-fit: cover;
+    border-radius: 40px;
+}
+
+.logo3{
+    width:120px;
+}
+
+footer{ 
+    font-weight: 900;
+    color: $secondary-color; 
+    justify-content: center;
+
+    padding: 20px;
+    display: flex; /* Enables flexbox layout */
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center; /* Vertically centers the content */
+}
+
+.as {
+    display: block;
+    margin: auto; /* Centers the image horizontally */
+    max-width: 100%; /* Optional: keeps the image responsive */
+}

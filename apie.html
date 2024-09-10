@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baigiamasis projektas</title>
+    <style>
+        /* Button styling */
+        #startAddingButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            animation: colorChange 10s infinite; /* Animates color change */
+        }
+
+        /* Keyframes for color change */
+        @keyframes colorChange {
+            0% { background-color: red; }
+            20% { background-color: green; }
+            40% { background-color: blue; }
+            60% { background-color: orange; }
+            80% { background-color: purple; }
+            100% { background-color: pink; }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="scss/styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <img class="logo3" id="logotipas" src="img/logo.png" alt="Logotipas">
+        <nav class="top-navigation">
+            <ul>
+                <li><a href="index.html">Pagrindinis</a></li>
+                <li><a href="ismokome.html">Ko išmokome</a></li>
+                <li><a href="apie.html">Apie mane</a></li>
+            </ul>
+        </nav>
+        <a href="https://www.iamjunior.lt/" class="contact-button" target="_blank">Susisiekite su kurso rengėjais</a>
+
+        <!-- Senas burgeris  -->
+        <div class="burger" id="burger">
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+        </div>
+
+    </header>
+
+    <main>
+        <section class="section__info">
+            <div >
+                <h1 id="main-heading">
+                    Sveiki aš esu Ričardas.
+                </h1>
+                <div>
+                    <button id="startAddingButton">Spauskite jei norite sužinoti apie mane daugiau</button>  <br>
+                </div>
+
+
+                 <div> 
+                    <ul id="itemList">                       
+                    
+                    </ul>                    
+                
+                    
+                    
+                
+                    <script>
+                        const itemList = document.getElementById('itemList');
+                        const startAddingButton = document.getElementById('startAddingButton');                        
+
+                        const items = [
+                            "Gyvenu Kaune",
+                        "Esu baigęs KTU informatikos fakultetą.",
+                        "Magistratūros studijas baigiau KTU vadybos fakultete",
+                        "Taip pat Vilniaus pedagoginiame (edukologijos) universitete baigiau pedagogo studijas",
+                        "Ir po viso to dirbu informatikos mokytoju",
+                        "O taip pat treniruoju vaikus Shindokai-kan karate.",
+                        "Mėgstu žaisti vaidmenų žaidimus (RPG)"
+
+                       
+                    ];
+
+                        // Index to keep track of the current item being added
+                    let currentIndex = 0;
+
+// Function to add a new item with a pause
+                    function addItemWithPause() {
+    // Check if all items have been added
+                    if (currentIndex >= items.length) {
+                        clearInterval(intervalId); // Stop adding items after all are added
+                        return;
+                    }
+
+    // Create a new list item
+                    const newItem = document.createElement('li');
+
+    // Set the text content of the new list item from the array
+                    newItem.textContent = items[currentIndex];
+
+    // Append the new list item to the list
+                    itemList.appendChild(newItem);
+
+    // Move to the next item
+                    currentIndex++;
+}
+
+// Variable to store the interval ID
+let intervalId;
+
+// Event listener for the button click
+startAddingButton.addEventListener('click', function() {
+    // Start adding items every 1 second (1000 milliseconds)
+    intervalId = setInterval(addItemWithPause, 1000);
+});
+                    </script>
+
+
+
+                 </div> 
+            </div>
+
+            <img loading="lazy" class="as" decoding="async"
+                src= "img/as.jpg" 
+                alt="Ricardas" width="800" height="800" />
+        </section>
+
+    </main>
+
+
+
+
+    <script src="js/index.js">
+
+    </script>
+    <script src="js/keisk.js">
+
+    </script>    
+
+<script src="js/burgeris.js">
+
+</script> 
+
+<script>
+// Array of images to switch between
+const images = ['img/as.jpg', 'img/as2.jpg']; // Replace with your image paths
+let imgIndex = 0;
+
+// Function to change the image
+function changeImage() {
+    // Toggle between 0 and 1
+    imgIndex = (currentIndex + 1) % images.length;
+    // Set the new image source
+    document.getElementById('as').src = images[imgIndex];
+}
+
+// Call changeImage every 5 seconds (5000 milliseconds)
+setInterval(changeImage, 2500);
+</script>
+
+</body>
+<footer>
+    <p>&copy; 2024 Ričardas Gasiulis. Visos teisės saugomos.</p>
+</footer>
+
+</html>

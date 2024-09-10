@@ -1,0 +1,19 @@
+.top-navigation {
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 40px;
+
+        li {
+            a {
+                color: $secondary-color;
+                border-bottom: 2px solid transparent;
+                transition: all 0.3s;
+                &:hover {
+                    color: $primary-color;
+                    border-bottom-color: $primary-color;
+                }
+            }
+        }
+    }
+}

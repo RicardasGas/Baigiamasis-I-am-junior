@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto";
+  font-size: 16px;
+  color: #4e4b66;
+  line-height: 24px;
+}
+
+h1 {
+  font-size: clamp(39px, 5vw, 61px);
+  line-height: clamp(47px, 5vw, 73px);
+  font-weight: 900;
+  color: #4e4b66;
+}
+@media (min-width: 768px) {
+  h1 {
+    max-width: 20ch;
+    margin: auto;
+  }
+}
+@media (min-width: 1280px) {
+  h1 {
+    margin: 0;
+  }
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 24px;
+  color: #4e4b66;
+}
+
+h1,
+h3 {
+  color: #4e4b66;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+main {
+  max-width: 1280px;
+  margin: auto;
+  padding: 60px 16px;
+}
+
+.site-header__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 40px;
+}
+
+.logo3 {
+  width: 120px;
+}
+
+footer {
+  font-weight: 900;
+  color: #4e4b66;
+  justify-content: center;
+  padding: 20px;
+  display: flex; /* Enables flexbox layout */
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+}
+
+.as {
+  display: block;
+  margin: auto; /* Centers the image horizontally */
+  max-width: 100%; /* Optional: keeps the image responsive */
+}
+
+.btn-primary {
+  background-color: #3f5e39;
+  color: #fff;
+  line-height: 19px;
+  font-weight: 700;
+  padding: 16px 32px 16px 32px;
+  transition: background-color 0.3s;
+}
+.btn-primary:hover {
+  background-color: #4e4b66;
+  color: #ecd070;
+}
+
+.burger {
+  background-color: #3f5e39;
+  width: 56px;
+  height: 56px;
+  border-radius: 4px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.burger:hover {
+  background-color: #4e4b66;
+}
+.burger__line {
+  height: 3px;
+  background-color: #fff;
+  border-radius: 4px;
+  flex: 0 0 3px;
+}
+@media (min-width: 1024px) {
+  .burger {
+    display: none;
+  }
+}
+
+.contact-button {
+  color: #3f5e39;
+  line-height: 19px;
+  font-weight: 700;
+  padding: 16px 40px;
+  border: 1px solid #3f5e39;
+  border-radius: 24px;
+  transition: 0.3s;
+}
+.contact-button:hover {
+  background-color: #3f5e39;
+  color: #fff;
+}
+
+.card__content {
+  background-color: #f7f7f7;
+  border-radius: 20px;
+  padding: 24px;
+  grid-column: span 12;
+  text-align: center;
+}
+.card__content img {
+  width: 40px;
+  height: 40px;
+}
+.card__content h3 {
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+@media (min-width: 768px) {
+  .card__content {
+    grid-column: span 6;
+    align-items: start;
+    text-align: left;
+  }
+}
+@media (min-width: 1024px) {
+  .card__content {
+    grid-column: span 3;
+  }
+}
+
+.top-navigation ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+.top-navigation ul li a {
+  color: #4e4b66;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s;
+}
+.top-navigation ul li a:hover {
+  color: #3f5e39;
+  border-bottom-color: #3f5e39;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 16px;
+  max-width: 1280px;
+  margin: auto;
+}
+@media (max-width: 1023px) {
+  .site-header .top-navigation {
+    display: flex;
+    flex-direction: "column";
+    position: "absolute";
+    top: "50px";
+    left: "0";
+  }
+  .site-header .top-navigation.column {
+    flex-direction: column;
+  }
+  .site-header .contact-button {
+    display: none;
+  }
+}
+
+.section__info {
+  text-align: center;
+  padding-bottom: 16px;
+}
+.section__info p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: clamp(16px, 2vw, 20px);
+}
+.section__info a {
+  margin-bottom: 40px;
+}
+@media (min-width: 768px) {
+  .section__info p {
+    max-width: 65ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 1280px) {
+  .section__info {
+    text-align: left;
+  }
+  .section__info .info__content {
+    display: flex;
+  }
+}
+
+.section__services {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(16px, 1.2vw, 20px);
+}/*# sourceMappingURL=styles.css.map */
